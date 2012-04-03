@@ -37,6 +37,9 @@ else
 fi
 echo
 
+rm -f data
+rm -f wget-warc
+
 ln -s /data/data data
 rm -rf data/*
 ln -s /usr/bin/wget-warc wget-warc
