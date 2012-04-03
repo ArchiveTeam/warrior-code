@@ -77,8 +77,9 @@ echo "Starting two clients..."
 echo
 echo
 
-tmux new-session "./seesaw.sh $nickname $bwlimit" \; \
+tmux new true \; \
+     set set-remain-on-exit on \
+     new-window "./seesaw.sh $nickname $bwlimit" \; \
      split-window "./seesaw.sh $nickname $bwlimit" \; \
-     set-remain-on-exit on \
      attach
 
