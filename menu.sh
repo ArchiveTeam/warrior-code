@@ -7,6 +7,10 @@ stop() {
   done
 }
 
-echo "Nothing to do."
+# there could be more than one project to work on;
+# this script could show a menu to choose from
+
+projects/memac-boot.sh
+
 stop
 

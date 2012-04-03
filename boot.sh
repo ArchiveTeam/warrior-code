@@ -41,3 +41,5 @@ echo "Starting the warrior..."
 
 ./menu.sh
 
+stop
+
