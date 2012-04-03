@@ -39,6 +39,7 @@ echo
 
 ln -s /data/data data
 rm -rf data/*
+ln -s /usr/bin/wget-warc wget-warc
 
 echo "Checking rsync connection..."
 if ! ( rsync fos.textfiles.com:: > /dev/null )
