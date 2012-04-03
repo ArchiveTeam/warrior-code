@@ -78,7 +78,7 @@ echo
 echo
 
 tmux new true \; \
-     set set-remain-on-exit on \
+     set set-remain-on-exit on \; \
      new-window "./seesaw.sh $nickname $bwlimit" \; \
      split-window "./seesaw.sh $nickname $bwlimit" \; \
      attach
