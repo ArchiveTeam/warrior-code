@@ -16,7 +16,13 @@ done
 
 touch $stopfile
 
-whiptail --backtitle "ArchiveTeam Warrior -- $project" \
-         --title 'Your Warrior is stopping...' \
-         --msgbox '\nYou have asked the workers to stop.\n\nWait until the workers finish uploading,\nthen shut down your virtual machine.\n' 0 0
+while ! whiptail --backtitle "ArchiveTeam Warrior -- $project" \
+                 --ok-button 'Shut down now' \
+                 --title 'Your Warrior is stopping...' \
+                 --msgbox '\nYou have asked the workers to stop.\n\nWait until the workers finish uploading,\nthen shut down your virtual machine.\n' 0 0
+do
+  echo
+done
+
+sudo /sbin/shutdown -h now
 
