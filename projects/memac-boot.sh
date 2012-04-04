@@ -87,7 +87,9 @@ echo
 
 tmux new true \; \
      set set-remain-on-exit on \; \
-     new-window "./seesaw.sh $nickname $bwlimit" \; \
+     new-window "/home/warrior/warrior-code/touch-stop-dialog.sh 'MobileMe' '/home/warrior/projects/memac/STOP'" \; \
+     split-window -h "./seesaw.sh $nickname $bwlimit" \; \
      split-window "./seesaw.sh $nickname $bwlimit" \; \
+     select-pane -t 0 \; \
      attach
 

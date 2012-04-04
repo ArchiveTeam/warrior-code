@@ -86,7 +86,9 @@ echo
 
 tmux new true \; \
      set set-remain-on-exit on \; \
-     new-window "./seesaw.sh $nickname $bwlimit" \; \
+     new-window "/home/warrior/warrior-code/touch-stop-dialog.sh 'FortuneCity' '/home/warrior/projects/focity/STOP'" \; \
+     split-window -h "./seesaw.sh $nickname $bwlimit" \; \
      split-window "./seesaw.sh $nickname $bwlimit" \; \
+     select-pane -t 0 \; \
      attach
 
