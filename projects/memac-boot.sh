@@ -2,16 +2,8 @@
 mkdir -p /home/warrior/projects/memac
 cd /home/warrior/projects/memac
 
-echo
-echo
-echo "  ****************************************************************"
-echo "  *                                                              *"
-echo "  *   ArchiveTeam MeMac Warrior                                  *"
-echo "  *                                                              *"
-echo "  *   memac.heroku.com                                           *"
-echo "  *                                                              *"
-echo "  ****************************************************************"
-echo
+whiptail --infobox '\n  ArchiveTeam MeMac Warrior\n\n  memac.heroku.com\n  www.archiveteam.org' 11 52
+
 
 if [[ -d .git ]]
 then
@@ -55,24 +47,36 @@ then
 fi
 echo
 
-echo
-echo "Who are you? Choose a nickname (letters and numbers only)"
-
 nickname=""
-while [[ ! $nickname =~ ^[-A-Za-z0-9_]+$ ]]
+first=true
+while $first || [[ ! $nickname =~ ^[-A-Za-z0-9_]+$ ]]
 do
-  echo -n "Nickname: "
-  read nickname
+  first=false
+  nickname=$(
+    whiptail \
+      --nocancel \
+      --backtitle "ArchiveTeam Warrior -- MobileMe" \
+      --title "Choose a nickname" \
+      --inputbox '\nWe use your nickname to show your results on our tracker.\n\nEnter your nickname (letters and numbers only):' 0 0 \
+      "$nickname" \
+      3>&1 1>&2 2>&3 \
+  )
 done
 
-echo
-echo "Do you want to limit the upload speed? (Leave empty for unlimited uploads.)"
-
-bwlimit="X"
-while [[ ! $bwlimit =~ ^[0-9]*$ ]]
+bwlimit=""
+first=true
+while $first || [[ ! $bwlimit =~ ^[0-9]*$ ]]
 do
-  echo -n "Limit (KBytes/second): "
-  read bwlimit
+  first=false
+  bwlimit=$(
+    whiptail \
+      --nocancel \
+      --backtitle "ArchiveTeam Warrior -- MobileMe" \
+      --title "Do you want a bandwidth limit?" \
+      --inputbox '\nYou can set a maximum upload bandwidth.\n\nEnter a limit (kilobytes/s) or leave empty:' 0 0 \
+      "$bwlimit" \
+      3>&1 1>&2 2>&3 \
+  )
 done
 
 echo
