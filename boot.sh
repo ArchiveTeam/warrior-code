@@ -26,11 +26,35 @@ echo
 echo
 echo "Loading the ArchiveTeam Warrior..."
 echo "Updating the warrior code..."
-if ! git pull
+
+tries=5
+delay=1
+err=false
+while [[ $tries -gt 0 ]]
+do
+  if git pull
+  then
+    tries=0
+    err=false
+  else
+    echo
+    echo "Waiting for a network connection..."
+    sleep $delay
+
+    tries=$(( tries - 1 ))
+    delay=$(( delay * 2 ))
+    err=true
+  fi
+done
+
+if $err
 then
+  echo
   echo "ERROR: Could not update the code. Is your network connection OK?"
+  echo "Reboot the machine and try again."
   stop
 fi
+
 git show --quiet --pretty="format:Warrior version %h -- %cr"
 echo
 echo
