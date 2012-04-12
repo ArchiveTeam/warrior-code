@@ -20,17 +20,12 @@ project=$(
     --menu '\nThanks for running an ArchiveTeam Warrior!\n\nBy running a Warrior you help the ArchiveTeam to save the web.\nYour computer downloads part of a site and uploads it to the\nArchiveTeam servers. Visit www.archiveteam.org to find out more.\n\nWhich project do you want to run?' \
     0 0 4 -- \
       memac    '-- archiving MobileMe' \
-      focity   '-- archiving FortuneCity' \
   3>&1 1>&2 2>&3 \
 )
 
 case $project in
   memac)
     projects/memac-boot.sh
-    ;;
-
-  focity)
-    projects/focity-boot.sh
     ;;
 
 esac
