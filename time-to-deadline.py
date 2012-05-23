@@ -72,7 +72,7 @@ def timeuntil(d, now=None):
 end_time = datetime.datetime.strptime(sys.argv[1], "%Y-%m-%dT%H:%M:%SZ")
 now = datetime.datetime.utcnow()
 if end_time < now:
-  print "in extra time"
+  print "extra time - closure imminent"
 else:
   print timeuntil(end_time)+" left"
 
