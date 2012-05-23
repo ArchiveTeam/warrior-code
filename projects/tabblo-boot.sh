@@ -36,7 +36,7 @@ rm -rf data/*
 if [[ ! -f wget-warc-lua ]]
 then
   echo "Installing the Lua library..."
-  sudo apt-get install lua5.1
+  sudo apt-get -y install liblua5.1-0
   echo "Downloading wget-warc-lua..."
   curl --location https://github.com/downloads/ArchiveTeam/tabblo-grab/wget-warc-lua.warrior > wget-warc-lua
   chmod +x wget-warc-lua
