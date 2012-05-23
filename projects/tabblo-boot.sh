@@ -33,10 +33,18 @@ rm -f data
 ln -s /data/data data
 rm -rf data/*
 
+echo "Installing the Lua library..."
+if ! sudo apt-get -y install liblua5.1-0
+then
+  echo
+  echo "ERROR: Could not install the Lua library."
+  echo "Is your network connection OK?"
+  echo
+  exit
+fi
+
 if [[ ! -f wget-warc-lua ]]
 then
-  echo "Installing the Lua library..."
-  sudo apt-get -y install liblua5.1-0
   echo "Downloading wget-warc-lua..."
   curl --location https://github.com/downloads/ArchiveTeam/tabblo-grab/wget-warc-lua.warrior > wget-warc-lua
   chmod +x wget-warc-lua
