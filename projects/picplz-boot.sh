@@ -99,5 +99,5 @@ echo "Starting two clients..."
 echo
 echo
 
-/home/warrior/warrior-code/tmux-two-clients.sh "Picplz" "/home/warrior/projects/picplz/STOP" "./seesaw.sh $nickname $bwlimit"
+/home/warrior/warrior-code/tmux-two-clients.sh "Picplz" "/home/warrior/projects/picplz/STOP" "./seesaw.sh $nickname $bwlimit" "Visit our leaderboard for live statistics:\nhttp://picplz.heroku.com/"
 

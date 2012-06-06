@@ -85,5 +85,5 @@ echo "Starting two clients..."
 echo
 echo
 
-/home/warrior/warrior-code/tmux-two-clients.sh "MobileMe" "/home/warrior/projects/memac/STOP" "./seesaw.sh $nickname $bwlimit"
+/home/warrior/warrior-code/tmux-two-clients.sh "MobileMe" "/home/warrior/projects/memac/STOP" "./seesaw.sh $nickname $bwlimit" "Visit our leaderboard for live statistics:\nhttp://memac.heroku.com/"
 
