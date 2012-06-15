@@ -19,7 +19,6 @@ project=$(
     --title 'How can you help us?' \
     --menu '\nThanks for running an ArchiveTeam Warrior!\n\nBy running a Warrior you help the ArchiveTeam to save the web.\nYour computer downloads part of a site and uploads it to the\nArchiveTeam servers. Visit www.archiveteam.org to find out more.\n\nWhich project do you want to run?' \
     0 0 4 -- \
-      picplz   "-- archiving Picplz      ($(./time-to-deadline.py 2012-07-03T23:59:59Z)) " \
       memac    "-- archiving MobileMe    ($(./time-to-deadline.py 2012-06-30T23:59:59Z)) " \
   3>&1 1>&2 2>&3 \
 )
@@ -27,10 +26,6 @@ project=$(
 case $project in
   memac)
     projects/memac-boot.sh
-    ;;
-
-  picplz)
-    projects/picplz-boot.sh
     ;;
 
 esac
