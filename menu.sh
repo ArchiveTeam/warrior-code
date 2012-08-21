@@ -12,24 +12,10 @@ version=$( git show --quiet --pretty="format:version %h (updated %cr)" )
 # there could be more than one project to work on;
 # this script could show a menu to choose from
 
-project=$(
-  whiptail \
-    --nocancel \
-    --backtitle "ArchiveTeam Warrior -- $version" \
-    --title 'How can you help us?' \
-    --menu '\nThanks for running an ArchiveTeam Warrior!\n\nBy running a Warrior you help the ArchiveTeam to save the web.\nYour computer downloads part of a site and uploads it to the\nArchiveTeam servers. Visit www.archiveteam.org to find out more.\n\nWhich project do you want to run?' \
-    0 0 4 -- \
-      Nothing "to do right now!" \
-  3>&1 1>&2 2>&3 \
-)
-
-#     memac    "-- archiving MobileMe    ($(./time-to-deadline.py 2012-06-30T23:59:59Z)) " \
-# case $project in
-#   memac)
-#     projects/memac-boot.sh
-#     ;;
-
-# esac
+whiptail \
+  --backtitle "ArchiveTeam Warrior -- $version" \
+  --title "Sorry, this is out of date" \
+  --msgbox '\nThanks for running an ArchiveTeam Warrior!\n\nUnfortunately, you are running an old version.\nThere will be no new projects on this warrior.\n\nA brand new version is waiting for you on\n\n  http://archive.org/details/archiveteam-warrior\n\n(look for the file with v2)' 16 60
 
 stop
 
