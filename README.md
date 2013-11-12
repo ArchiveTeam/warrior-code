@@ -1,3 +1,9 @@
+Notice: This repo is Warrior version 1 which is now **obsolete**.
+
+The new code is now located at [archiveteam/warrior-code2](https://github.com/archiveteam/warrior-code2) and [archiveteam/seesaw-kit](https://github.com/ArchiveTeam/seesaw-kit). The latest information and download link is located at [**☞ArchiveTeam Warrior wiki page**](http://archiveteam.org/index.php?title=Warrior).
+
+---
+
 The ArchiveTeam Warrior is a virtual archiving appliance. You can run it to help with the ArchiveTeam archiving efforts.
 
 Download [the appliance (242MB)](http://archive.org/download/archiveteam-warrior/archiveteam-warrior-v1.ova) and run it with your favorite virtualization tool (VirtualBox, VMware etc.).
