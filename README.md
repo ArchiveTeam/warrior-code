@@ -6,7 +6,7 @@ The new code is now located at [archiveteam/warrior-code2](https://github.com/ar
 
 The ArchiveTeam Warrior is a virtual archiving appliance. You can run it to help with the ArchiveTeam archiving efforts.
 
-Download [the appliance (242MB)](http://archive.org/download/archiveteam-warrior/archiveteam-warrior-v1.ova) and run it with your favorite virtualization tool (VirtualBox, VMware etc.).
+Download [the appliance (167.8MB)](http://archive.org/download/archiveteam-warrior/archiveteam-warrior-v2-20120707.ova) and run it with your favorite virtualization tool (VirtualBox, VMware etc.).
 
 At this moment the Warrior can only be used to archive MobileMe, but this could be extended to other projects in the future.
 
