@@ -12,7 +12,7 @@ At this moment the Warrior can only be used to archive MobileMe, but this could 
 
 ## The Warrior ##
 
-The virtual appliance uses 400MB of memory and up to 70GB of disk space. Start it and follow the instructions on screen. If you have enough, simply stop or reboot the machine.
+The virtual appliance uses 400MB of memory and up to 70GB of disk space. Start it and follow the instructions on screen. If you don't have enough resources (memory, disk space, etc), simply stop or reboot the machine.
 
 There's no need to log in, but should you want to do that: use `Alt + F2` to switch to the login prompt and log in as `root` with password `archiveteam`.
 
